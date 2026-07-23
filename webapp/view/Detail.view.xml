@@ -1,0 +1,59 @@
+<mvc:View controllerName="sapform.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+  <Page title="🎯 Submitted Details" class="sapUiContentPadding">
+
+    <VBox class="sapUiSmallMarginTop sapUiSmallMarginBottom">
+
+      <ObjectHeader title="Submitted Information" />
+
+      <VBox class="sapUiSmallMargin">
+        <HBox>
+          <Label text="Name:" width="120px" design="Bold" />
+          <Text text="{formModel>/name}" />
+        </HBox>
+        <HBox>
+          <Label text="Street:" width="120px" design="Bold" />
+          <Text text="{formModel>/street}" />
+        </HBox>
+        <HBox>
+          <Label text="City:" width="120px" design="Bold" />
+          <Text text="{formModel>/city}" />
+        </HBox>
+        <HBox>
+          <Label text="ZIP Code:" width="120px" design="Bold" />
+          <Text text="{formModel>/zip}" />
+        </HBox>
+        <HBox>
+          <Label text="Country:" width="120px" design="Bold" />
+          <Text text="{formModel>/country}" />
+        </HBox>
+        <HBox>
+          <Label text="Purchase Order:" width="120px" design="Bold" />
+          <Text text="{formModel>/purchaseOrder}" />
+       </HBox>
+      <HBox>
+      <Label text="Valid From:" width="120px" design="Bold" />
+       <Text text="{formModel>/validFrom}" />
+        </HBox>
+      <HBox>
+      <Label text="Valid To:" width="120px" design="Bold" />
+      <Text text="{formModel>/validTo}" />
+     </HBox>
+    <HBox>
+      <Label text="Net Value:" width="120px" design="Bold" />
+      <Text text="{formModel>/netValue}" />
+      </HBox>
+      </VBox>
+
+      
+
+      <Toolbar>
+        <ToolbarSpacer />
+        <Button text="Back" icon="sap-icon://nav-back" press="onNavBack" />
+      </Toolbar>
+
+    </VBox>
+  </Page>
+</mvc:View>

@@ -1,0 +1,94 @@
+<mvc:View
+ controllerName="sapform.controller.App"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:form="sap.ui.layout.form"
+  displayBlock="true">
+
+<Shell>
+ <App id="app">
+  <Page title="Form Title">
+   
+
+      <!-- Group Title Section -->
+      <form:SimpleForm editable="true" layout="ResponsiveGridLayout" title="Group Title">
+        <Label text="Name:" />
+       <Input id="nameInput" />
+        
+        <Label text="Street/No.:" />
+        <Input id="streetInput" />
+        
+        <Label text="ZIP Code/City:" />
+        <HBox>
+           <Input id="zipInput" width="50%" />
+           <Input id="cityInput" width="50%" />
+        </HBox>
+        
+        <Label text="Country:" />
+         <Input id="countryInput" />
+
+      </form:SimpleForm>
+
+
+      <!-- Quotation Details Section -->
+      <form:SimpleForm editable="true" layout="ResponsiveGridLayout" title="Quotation Details">
+        <Label text="Purchase Order:" />
+        <Input id="poInput" />
+
+        <Label text="Valid From:" />
+        <HBox>
+          <DatePicker id="validFrom" width="50%" />
+          <DatePicker id="validTo" width="50%" />
+        </HBox>
+
+        <Label text="Net Value:" />
+        <Input id="nvInput" />
+
+        
+      <Button
+  text="Submit"
+  press="onSubmitPress"
+  type="Emphasized"
+  width="6rem"
+  class="boxButton" />
+
+      </form:SimpleForm>
+      
+
+      <!-- Products Table -->
+      <form:SimpleForm editable="true" layout="ResponsiveGridLayout" >
+     <VBox>
+    <Title text="Product List" level="H2"/>
+    <Table items="{products>/}">
+      <columns>
+        <Column><Text text="Product ID" /></Column>
+        <Column><Text text="Name" /></Column>
+        <Column><Text text="Category" /></Column>
+        <Column><Text text="Price" /></Column>
+        <Column><Text text="Stock" /></Column>
+        <Column><Text text="Manufacturer" /></Column>
+      </columns>
+      
+      <items>
+        <ColumnListItem type="Active" press="onProductPress">
+          <cells>
+            <Text text="{products>productId}" />
+            <Text text="{products>name}" />
+            <Text text="{products>category}" />
+            <Text text="{products>price}" />
+            <Text text="{products>stock}" />
+            <Text text="{products>manufacturer}" />
+            
+          </cells>
+        </ColumnListItem>
+      </items>
+    </Table>
+  </VBox>
+   </form:SimpleForm>
+
+    
+  </Page>
+  </App>
+  </Shell>
+</mvc:View>

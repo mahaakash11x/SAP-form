@@ -1,0 +1,50 @@
+<mvc:View
+    controllerName="sapform.controller.Product"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+  <Page
+    title="🛒 Product Details"
+    showNavButton="true"
+    navButtonPress="onBack"
+    class="sapUiContentPadding">
+
+    <VBox class="sapUiSmallMarginTop sapUiSmallMarginBottom">
+
+      <ObjectHeader title="Product Information" />
+
+      <VBox class="sapUiSmallMargin">
+        <HBox>
+          <Label text="ID:" width="120px" design="Bold" />
+          <Text text="{products>productId}" />
+        </HBox>
+        <HBox>
+          <Label text="Name:" width="120px" design="Bold" />
+          <Text text="{products>name}" />
+        </HBox>
+        <HBox>
+          <Label text="Category:" width="120px" design="Bold" />
+          <Text text="{products>category}" />
+        </HBox>
+        <HBox>
+          <Label text="Price:" width="120px" design="Bold" />
+          <Text text="₹{products>price}" />
+        </HBox>
+        <HBox>
+          <Label text="Stock:" width="120px" design="Bold" />
+          <Text text="{products>stock}" />
+        </HBox>
+        <HBox>
+          <Label text="Manufacturer:" width="120px" design="Bold" />
+          <Text text="{products>manufacturer}" />
+        </HBox>
+      </VBox>
+
+      <Toolbar>
+        <ToolbarSpacer />
+        
+      </Toolbar>
+
+    </VBox>
+  </Page>
+</mvc:View>
